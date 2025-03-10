@@ -15,4 +15,15 @@ document.addEventListener('DOMContentLoaded', () => {
         const nav = document.querySelector('nav');
         nav.innerHTML = `<span class="user-email">${userEmail}</span>`;
     }
+
+    // Helper function to get accounts
+    window.getAccounts = () => {
+        const accounts = localStorage.getItem('accounts');
+        return accounts ? JSON.parse(accounts) : {};
+    };
+
+    // Helper function to save accounts
+    window.saveAccounts = (accounts) => {
+        localStorage.setItem('accounts', JSON.stringify(accounts));
+    };
 });
