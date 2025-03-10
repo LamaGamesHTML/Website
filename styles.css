@@ -159,6 +159,13 @@ main {
     background-color: #45a049;
 }
 
+.error-message {
+    color: #ff4444;
+    font-size: 0.9rem;
+    margin-top: 5px;
+    display: none;
+}
+
 .user-email {
     color: white;
     font-family: 'Comic Sans MS', 'Comic Sans', cursive;
@@ -183,8 +190,4 @@ main {
     .games-grid {
         grid-template-columns: repeat(4, 1fr);
     }
-}
-
-.games-grid > *:nth-child(n+5) {
-    grid-column: auto;
 }
